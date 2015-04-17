@@ -70,7 +70,7 @@
                     '</div>'
                 );
             }
-            html.push('<ul>');
+            html.push('<form><ul>');
             if (this.options.selectAll && !this.options.single) {
                 html.push(
                     '<li class="ms-select-all">',
@@ -85,7 +85,7 @@
                 html.push(that.optionToHtml(i, elm));
             });
             html.push('<li class="ms-no-results">' + this.options.noMatchesFound + '</li>');
-            html.push('</ul>');
+            html.push('</ul></form>');
             this.$drop.html(html.join(''));
 
             this.$drop.find('ul').css('max-height', this.options.maxHeight + 'px');
